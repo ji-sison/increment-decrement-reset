@@ -1,4 +1,10 @@
 import React from 'react';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -12,7 +18,7 @@ class App extends React.Component {
       this.reset = this.reset.bind(this)
  
     }
-  
+    //start of class methods
     increment(){
       this.setState(state=>({
         count: state.count + 1
@@ -24,19 +30,36 @@ class App extends React.Component {
       }))
     }
     reset(){
-      this.setState(state=>({
+      this.setState({
         count: 0
-      }))
+      })
     }
-  
+    
     render() {
       return (
-        <div>
-          <button className='inc' onClick={this.increment}>Increment!</button>
-          <button className='dec' onClick={this.decrement}>Decrement!</button>
-          <button className='reset' onClick={this.reset}>Reset</button>
-          <h1>Current Count: {this.state.count}</h1>
-        </div>
+
+        <Card 
+        sx = {{ 
+          margin:'auto',
+          maxWidth: 345,
+          background: 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)',
+          border: 0,
+          borderRadius: 3,
+          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+          color: 'white',
+          padding: '0 30px',
+        }}>
+          <CardContent>
+            <Typography variant= "h6">Current Count: </Typography>
+            <Typography variant= "h1">{this.state.count}</Typography>
+          </CardContent>
+
+          <CardActions sx={{margin:'auto'}}>
+          <Button size="small" variant="contained" className='inc' onClick={this.increment}>Increment!</Button>
+          <Button size="small" variant="contained" className='dec' onClick={this.decrement}>Decrement!</Button>
+          <Button size="small" variant="contained" className='reset' onClick={this.reset}>Reset</Button>
+          </CardActions>
+        </Card>
       );
     }
   };
