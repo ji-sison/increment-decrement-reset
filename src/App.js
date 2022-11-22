@@ -7,6 +7,10 @@ import {
   Typography
 } from '@material-ui/core';
 
+const btnStyles = {
+    size: 'small',
+    background: 'purple'
+}
 
 
 class App extends React.Component {
@@ -58,9 +62,9 @@ class App extends React.Component {
           </CardContent>
 
           <CardActions>
-          <Button size="small" variant="contained" className='inc' onClick={this.increment}>Increment!</Button>
-          <Button size="small" variant="contained" className='dec' onClick={this.decrement}>Decrement!</Button>
-          <Button size="small" variant="contained" className='reset' onClick={this.reset}>Reset</Button>
+          <Button style={btnStyles} variant="contained" className='inc' onClick={this.increment}>Increment!</Button>
+          <Button style={btnStyles} variant="contained" className='dec' onClick={this.decrement}>Decrement!</Button>
+          <Button style={btnStyles} variant="contained" className='reset' onClick={this.reset}>Reset</Button>
           </CardActions>
         </Card>
       );
