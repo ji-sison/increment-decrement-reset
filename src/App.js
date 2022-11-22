@@ -9,7 +9,8 @@ import {
 
 const btnStyles = {
     size: 'small',
-    background: 'purple'
+    color: 'white',
+    margin:'auto'
 }
 
 
@@ -62,11 +63,12 @@ class App extends React.Component {
           </CardContent>
 
           <CardActions>
-          <Button style={btnStyles} variant="contained" className='inc' onClick={this.increment}>Increment!</Button>
-          <Button style={btnStyles} variant="contained" className='dec' onClick={this.decrement}>Decrement!</Button>
-          <Button style={btnStyles} variant="contained" className='reset' onClick={this.reset}>Reset</Button>
+          <Button style={btnStyles} variant="text"  onClick={this.increment}>Increment!</Button>
+          <Button style={btnStyles} variant="text" onClick={this.decrement}>Decrement!</Button>
+          <Button style={btnStyles} variant="text" onClick={this.reset}>Reset</Button>
           </CardActions>
         </Card>
+
       );
     }
   };
