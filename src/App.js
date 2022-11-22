@@ -1,9 +1,12 @@
 import React from 'react';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Typography
+} from '@material-ui/core';
+
 
 
 class App extends React.Component {
@@ -40,7 +43,7 @@ class App extends React.Component {
 
         <Card 
         sx = {{ 
-          margin:'auto',
+          margin:'auto',          
           maxWidth: 345,
           background: 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)',
           border: 0,
@@ -54,7 +57,7 @@ class App extends React.Component {
             <Typography variant= "h1">{this.state.count}</Typography>
           </CardContent>
 
-          <CardActions sx={{margin:'auto'}}>
+          <CardActions>
           <Button size="small" variant="contained" className='inc' onClick={this.increment}>Increment!</Button>
           <Button size="small" variant="contained" className='dec' onClick={this.decrement}>Decrement!</Button>
           <Button size="small" variant="contained" className='reset' onClick={this.reset}>Reset</Button>
